@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // kiểm tra chuỗi đưa vào có đúng định dạng dd/mm/yy
+
+        regex=/\b\d{1,2}\/\d{1,2}\/(\d{4}|\d{2})\b/;
+        function check(str) {
+            if (regex.test(str)) {
+                console.log('true');
+            } else {
+                console.log('false');
+            }
+        }
+        let a='02/05/1991';
+        check(a);
+
+        // đếm số từ trong một chuỗi.
+        function array(x) {
+            let y=x.split(' ');
+            return y.length;
+        }
+        let string1= 'xin chào việt nam';
+        console.log(array(string1));
+
+
+        //đếm số nguyên ân ,phụ âm trong 1 chuỗi;
+        let nguyenAn=['a','e','o','u','i'];
+        let count=0;
+        function check01(str) {
+            for (let i=0;i<str.length;i++) {
+              if (nguyenAn.indexOf(str[i]) !==-1) {
+                  count++;
+              }
+            }
+            return count;
+        }
+
+
+        let string2='nguyen xuan binh hello code gym';
+       console.log( check01(string2));
+
+
+       // kiểm tra mã số bảo mật hợp lệ
+
+
+    </script>
+</body>
+</html>
